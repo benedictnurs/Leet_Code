@@ -7,9 +7,9 @@ class Solution:
         for number, count in nums.items():
             heapq.heappush(heap,(-count,number))
 
-
         res = []
-        for _ in range(k):
+        while k:
             res.append(heapq.heappop(heap)[1])
-        
+            k-=1
+
         return res
