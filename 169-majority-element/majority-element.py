@@ -1,6 +1,9 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        ans = [float(-inf),0]
-        for i in set(nums):
-            ans = max(ans,[nums.count(i),i])
-        return(ans[1])
+        nums = Counter(nums)
+        print(nums)
+        heap = []
+        for k,v in nums.items():
+            heappush(heap,(-v,k))
+        
+        return (heappop(heap)[1])
