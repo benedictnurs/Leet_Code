@@ -5,11 +5,12 @@ class Solution:
 
 
         for i in nums:
-            curr = 1
             if i - 1 not in nums:
+                curr = 1
+
                 while (i+1) in nums:
                     curr += 1
                     i += 1
-            sol = max(sol, curr)
+                sol = max(sol, curr)
         
         return (sol)
