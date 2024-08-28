@@ -1,13 +1,13 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        current = []
+        seen = []
         count = 0
         
         for i in s:
-            if i not in current:
-                current.append(i)
+            if i not in seen:
+                seen.append(i)
             else:
                 count += 1
-                current = [i]
+                seen = [i]
         
         return count + 1
