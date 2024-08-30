@@ -6,7 +6,7 @@ class Solution:
 
         for i in range(len(list1)):
             hm[list1[i]] = [i]
-        
+            
         for i in range(len(list2)):
             if list2[i] in hm:
                 hm[list2[i]].append(i)
