@@ -1,7 +1,7 @@
 class Solution:
     def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
         hm = {}
-        minimum = float(-inf)
+        minimum = 0
         new = {}
 
         for i in range(len(list1)):
@@ -21,4 +21,4 @@ class Solution:
                 else:
                     new[sum(v)].append(k)
         
-        return (new[min(new)])                
+        return new[min(new)]          
