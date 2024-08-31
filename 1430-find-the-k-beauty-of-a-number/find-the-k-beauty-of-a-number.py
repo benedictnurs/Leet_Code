@@ -5,8 +5,7 @@ class Solution:
         curr = nums[:k]
         if num % int("".join(curr)) == 0:
             count += 1
-        if len(nums) == k:
-            return count
+
 
         for i in range(k,len(nums)):
             curr.pop(0)
@@ -14,5 +13,4 @@ class Solution:
             if int("".join(curr)) != 0 and num % int("".join(curr)) == 0:
                 count += 1
 
-        
         return count
