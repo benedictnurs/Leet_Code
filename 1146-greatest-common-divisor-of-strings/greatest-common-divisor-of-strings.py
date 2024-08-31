@@ -3,5 +3,4 @@ class Solution:
         if str1+str2 == str2+str1:
             g = (gcd(len(str1),len(str2)))
             return("".join(list(str1+str2)[:g]))
-        
         return ""
