@@ -6,6 +6,7 @@ class Solution:
         ans = []
         if k > len(s):
             return []
+            
         for i in range(k):
             curr.append(s[i])
             dna = "".join(curr)
