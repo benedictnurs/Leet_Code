@@ -6,5 +6,5 @@ class Solution:
                 total += timeSeries[i+1] - timeSeries[i]
             else:
                 total += duration
-        total+= duration
+        total += duration
         return total
