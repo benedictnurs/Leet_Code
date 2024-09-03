@@ -6,8 +6,7 @@ class Solution:
         
         for r in range(len(nums)):
             count += nums[r]
-            if count >= target:
-                ans = min(r-l+1,ans)
+
 
             while count >= target and l < len(nums):
                 count -= nums[l]
