@@ -1,6 +1,5 @@
 class Solution:
     def getLucky(self, s: str, k: int) -> int:
-        print(ord("a")-96)
         sol = ""
         for i in s:
             sol+=(str((ord(i))-96))
