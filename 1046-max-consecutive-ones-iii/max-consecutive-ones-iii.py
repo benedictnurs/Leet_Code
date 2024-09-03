@@ -7,7 +7,7 @@ class Solution:
         for r in range(len(nums)):
             if nums[r] == 0:
                 count += 1
-        
+
             while count > k:
                 if nums[l] == 0:
                     count -= 1
