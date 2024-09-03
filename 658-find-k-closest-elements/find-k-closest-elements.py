@@ -12,4 +12,4 @@ class Solution:
             heappush(sol, h[1])
             k-=1
         
-        return (sorted(sol))
+        return sorted(sol)
