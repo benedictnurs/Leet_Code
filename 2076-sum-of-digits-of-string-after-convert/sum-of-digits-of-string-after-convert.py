@@ -8,4 +8,4 @@ class Solution:
             sol += str(a)
             k -= 1
         
-        return (int(sol))
+        return int(sol)
