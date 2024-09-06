@@ -10,7 +10,6 @@ class Solution:
             else:
                 sol.append(intervals[l])
                 l = r
-        
         sol.append(intervals[l])
         return (sol)
         
