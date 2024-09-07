@@ -8,7 +8,7 @@ class Solution:
             count += nums[r]
 
 
-            while count >= target and l < len(nums):
+            while count >= target:
                 count -= nums[l]
                 ans = min(r-l+1,ans)
                 l += 1
