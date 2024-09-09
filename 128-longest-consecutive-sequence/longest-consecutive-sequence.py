@@ -7,7 +7,6 @@ class Solution:
         for i in nums:
             if i - 1 not in nums:
                 curr = 1
-
                 while (i+1) in nums:
                     curr += 1
                     i += 1
