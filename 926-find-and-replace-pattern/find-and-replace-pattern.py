@@ -15,7 +15,6 @@ class Solution:
             else:
                 hm[tuple(indexs)].append(word)
         
-
         for pos, word in hm.items():
             if pos == tuple(idx):
                 return(word)
