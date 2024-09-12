@@ -17,6 +17,6 @@ class Solution:
         
         for pos, word in hm.items():
             if pos == tuple(idx):
-                return(word)
+                return word
 
         
