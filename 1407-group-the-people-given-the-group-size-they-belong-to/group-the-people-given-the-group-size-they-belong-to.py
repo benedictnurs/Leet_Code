@@ -13,5 +13,5 @@ class Solution:
             for i in range(0, len(num), k):
                 sol.append(num[i:i+k])
         
-        return (sol)
+        return sol
 
