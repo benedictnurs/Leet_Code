@@ -8,4 +8,4 @@ class Solution:
         if (c1.keys() != c2.keys()):
             return False
         
-        return (sorted(c1.values()) == sorted(c2.values()))
+        return sorted(c1.values()) == sorted(c2.values())
