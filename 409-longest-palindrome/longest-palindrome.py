@@ -6,7 +6,6 @@ class Solution:
         for i in set(s):
             count = s.count(i)
             if count % 2 != 0:
-                # If odd count, subtract 1 to make it even
                 if "odd" not in hm:
                     hm["odd"] = count - 1
                 else:
@@ -17,6 +16,5 @@ class Solution:
                 else:
                     hm["even"] += count
         
-        # If there's any odd character, we can add 1 more character to the center
         return sum(hm.values()) + (1 if "odd" in hm else 0)
 
