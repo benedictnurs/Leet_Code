@@ -12,7 +12,6 @@ class Solution:
                 hm[user_id] = {minutes}   
         
         for log in hm:
-            location = len(hm[log])-1
-            lst[location]+=1
+            lst[len(hm[log])-1]+=1
 
         return lst
