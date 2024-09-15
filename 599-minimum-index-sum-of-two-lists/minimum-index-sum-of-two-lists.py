@@ -12,7 +12,8 @@ class Solution:
                 hm[list2[i]].append(i)
             else:
                 hm[list2[i]] = [i]
-        
+        print(hm)
+
         for k,v in hm.items():
             if len(v) == 2:
                 minimum = min(minimum, sum(v))
@@ -20,5 +21,5 @@ class Solution:
                     new[sum(v)] = [k]
                 else:
                     new[sum(v)].append(k)
-        
+        print(new)
         return new[min(new)]          
