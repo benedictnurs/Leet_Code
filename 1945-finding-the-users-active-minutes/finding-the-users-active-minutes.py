@@ -5,13 +5,11 @@ class Solution:
         #How many people visited once?
         hm = {}
         lst = k*[0]
-        for log in logs:
-            user_id = log[0]
-            minute = log[1]
+        for user_id, minutes in logs:
             if user_id in hm:
-                hm[user_id].add(minute)
+                hm[user_id].add(minutes)
             else:
-                hm[user_id] = {minute}   
+                hm[user_id] = {minutes}   
         
         for log in hm:
             location = len(hm[log])-1
