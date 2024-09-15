@@ -14,4 +14,5 @@ class Solution:
 
         for domain, visits in hm.items():
             sol.append(f"{visits} {domain}")
+        
         return sol
