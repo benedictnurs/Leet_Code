@@ -17,5 +17,4 @@ class Solution:
             location = len(hm[log])-1
             lst[location]+=1
 
-        print(lst)
         return lst
