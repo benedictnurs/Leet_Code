@@ -13,6 +13,6 @@ class Solution:
                     hm[subdomain] = int(domain.split()[0])
 
         for domain, visits in hm.items():
-            sol.append(f"{visits} {domain}")
-        
+            sol.append(str(visits) + " " + domain)
+ 
         return sol
