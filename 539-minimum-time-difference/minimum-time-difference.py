@@ -10,6 +10,6 @@ class Solution:
 
         for i in range(1, len(mins)):
             minTime = min(minTime, mins[i] - mins[i - 1])
-        
         minTime = min(minTime, 1440 - (mins[-1] - mins[0]))
+
         return minTime
