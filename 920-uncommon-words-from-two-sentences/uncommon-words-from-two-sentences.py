@@ -21,5 +21,4 @@ class Solution:
             if v == 1:
                 sol.append(k)
     
-        print(sol)
         return sol
