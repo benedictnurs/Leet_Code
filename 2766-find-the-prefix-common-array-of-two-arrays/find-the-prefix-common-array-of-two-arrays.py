@@ -13,7 +13,7 @@ class Solution:
                 hm[B[i]] = 1  
             elif B[i] in hm:
                 hm[B[i]] += 1
-            
+                
             count = list(hm.values()).count(2)
             total[i] = count
             
