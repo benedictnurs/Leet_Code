@@ -1,21 +1,10 @@
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        total = []
-        hm = {}
-
+        a = set()
+        b = set()
+        count = [0] * len(A)
         for i in range(len(A)):
-            if A[i] not in hm:
-                hm[A[i]] = 1
-            elif A[i] in hm:
-                hm[A[i]] += 1
- 
-            if B[i] not in hm:
-                hm[B[i]] = 1  
-            elif B[i] in hm:
-                hm[B[i]] += 1
-            
-            count = list(hm.values()).count(2)
-            total.append(count)
-            
-        return total         
-
+            a.add(A[i])
+            b.add(B[i])
+            count[i] = len(a & b)
+        return count
