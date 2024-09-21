@@ -2,8 +2,6 @@ class Solution:
     def isCircularSentence(self, sentence: str) -> bool:
         lst = sentence.split(" ")
 
-
-    
         if lst[-1][-1] != lst[0][0]:
             return False
  
