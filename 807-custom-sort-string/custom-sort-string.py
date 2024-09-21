@@ -1,23 +1,22 @@
 class Solution:
     def customSortString(self, order: str, s: str) -> str:
-        hm = {}
+        orderLst = []
         sett = set(list(s))
         lst = list(s)
         sol = ""
+        
         for i in range(len(order)):
-            hm[i] = order[i]
+            orderLst.append(order[i])
 
-        print(hm)
-
-        for k, v in hm.items():
-            if v in sett:
-                sol += (v)*s.count(v)
-                sett.remove(v)
+        for i in orderLst:
+            if i in sett:
+                sol += (i)*s.count(i)
+                sett.remove(i)
 
         new = sorted(sett)
-        newlst = (sorted(lst))
-
-        for i in new:
-            sol += i*newlst.count(i)
+        lst.sort()
+        
+        for i in sorted(sett):
+            sol += i*lst.count(i)
 
         return sol
