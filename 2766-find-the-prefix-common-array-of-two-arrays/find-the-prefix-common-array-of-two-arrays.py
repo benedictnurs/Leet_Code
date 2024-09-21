@@ -14,10 +14,7 @@ class Solution:
             elif B[i] in hm:
                 hm[B[i]] += 1
             
-            count = 0
-            for i in hm.values():
-                if i == 2:
-                    count += 1
+            count = list(hm.values()).count(2)
             total.append(count)
             
         return total         
