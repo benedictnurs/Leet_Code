@@ -1,6 +1,6 @@
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        total = []
+        total = [0]*len(A)
         hm = {}
 
         for i in range(len(A)):
@@ -15,7 +15,7 @@ class Solution:
                 hm[B[i]] += 1
             
             count = list(hm.values()).count(2)
-            total.append(count)
+            total[i] = count
             
         return total         
 
