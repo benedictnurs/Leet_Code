@@ -3,8 +3,6 @@ class Solution:
         total = []
         hm = {}
 
-        sol = []
-
         for i in range(len(A)):
             if A[i] not in hm:
                 hm[A[i]] = 1
@@ -22,6 +20,5 @@ class Solution:
                     count += 1
             total.append(count)
             
-        print(total)
         return total         
 
