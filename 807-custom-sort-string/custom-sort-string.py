@@ -10,9 +10,8 @@ class Solution:
 
         for i in orderLst:
             if i in sett:
-                sol += (i)*s.count(i)
+                sol += i*s.count(i)
                 sett.remove(i)
-
 
         for i in sorted(sett):
             sol += i*lst.count(i)
