@@ -4,5 +4,4 @@ class Solution:
 
         for i in nums:
             sol += (min(3-(i%3), i%3))
-            print(sol)
         return sol 
