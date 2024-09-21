@@ -13,9 +13,7 @@ class Solution:
                 sol += (i)*s.count(i)
                 sett.remove(i)
 
-        new = sorted(sett)
-        lst.sort()
-        
+
         for i in sorted(sett):
             sol += i*lst.count(i)
 
