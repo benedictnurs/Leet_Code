@@ -3,4 +3,4 @@ class Solution:
         s = set(bannedWords)
 
         
-        return sum([i in s for i in message]) >= 2
+        return sum([i in s for i in message]) > 1
