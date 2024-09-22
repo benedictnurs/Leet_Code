@@ -11,7 +11,6 @@ class Solution:
 
             for c in range(len(matrix)):
                 matrix[c][col] += 1        
-        print(matrix)
 
         for i in sum(matrix,[]):
             if i % 2 != 0:
