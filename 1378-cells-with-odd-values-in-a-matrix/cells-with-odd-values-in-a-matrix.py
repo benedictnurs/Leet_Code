@@ -1,6 +1,6 @@
 class Solution:
     def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:
-        matrix = [[0]*n for _ in range(m) ]
+        matrix = [[0] * n for _ in range(m)]
         sol = 0
         for i in range(len(indices)):
             row = indices[i][0]
