@@ -9,7 +9,6 @@ class Solution:
             hm[row] = (column[k], column)
 
         for ranking, row in sorted(hm.values(), key=lambda x: x[0], reverse = True):
-            print(ranking, row)
             sol.append(row)
         
         return sol
