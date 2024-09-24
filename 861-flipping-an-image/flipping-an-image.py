@@ -11,7 +11,7 @@ class Solution:
             for j in range(len(og)):
                 if og[j] == 1:
                     hold.append(0)
-                if og[j] == 0:
+                else:
                     hold.append(1)
             sol.append(hold)
 
