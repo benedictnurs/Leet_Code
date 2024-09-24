@@ -3,7 +3,6 @@ class Solution:
         sol = []
 
         for i in image:
-            temp = i[::-1]
             hold = []
             for j in i[::-1]:
                 if j == 1:
