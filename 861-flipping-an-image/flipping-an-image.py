@@ -1,17 +1,14 @@
 class Solution:
     def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:
-        temp = []
         sol = []
-        for i in image:
-            temp.append(i[::-1])
 
-        for i in temp:
+        for i in image:
+            temp = i[::-1]
             hold = []
-            og = i[:]
-            for j in range(len(og)):
-                if og[j] == 1:
+            for j in temp:
+                if j == 1:
                     hold.append(0)
-                else:
+                if j == 0:
                     hold.append(1)
             sol.append(hold)
 
