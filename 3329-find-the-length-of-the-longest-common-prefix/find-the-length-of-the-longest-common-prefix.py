@@ -5,12 +5,12 @@ class Solution:
 
         for num in arr1:
             prefix = str(num)
-            for i in range(len(prefix) + 1):
+            for i in range(1, len(prefix) + 1):
                 seen1.add(prefix[:i])
 
         for num in arr2:
             prefix = str(num)
-            for i in range(len(prefix) + 1):
+            for i in range(1, len(prefix) + 1):
                 seen2.add(prefix[:i])
 
         if seen1 & seen2:
