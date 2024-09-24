@@ -5,7 +5,7 @@ class Solution:
         for i in image:
             temp = i[::-1]
             hold = []
-            for j in temp:
+            for j in i[::-1]:
                 if j == 1:
                     hold.append(0)
                 if j == 0:
