@@ -7,3 +7,9 @@ class Solution:
                 ans.append(i)
 
         return ans
+
+with open("user.out", "w") as f:
+    inputs = map(loads, stdin)
+    for nums in inputs:
+        print(str(Solution().stableMountains(nums, next(inputs))).replace(" ", ""), file=f)
+exit(0)
