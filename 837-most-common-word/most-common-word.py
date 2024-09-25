@@ -8,6 +8,9 @@ class Solution:
 
         for word in words:
             if word not in banned:
-                hm[word] = words.count(word)
+                if word in hm:
+                    hm[word] += 1
+                else:
+                    hm[word] = 1
         
         return max(hm.items(), key=lambda item: item[1])[0] if hm else ""
