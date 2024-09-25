@@ -1,7 +1,6 @@
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         sentence = "".join(ch if ch.isalnum() or ch == " " else " " for ch in paragraph.lower())
-        print(sentence)
         words = sentence.split()
         
         hm = {}
