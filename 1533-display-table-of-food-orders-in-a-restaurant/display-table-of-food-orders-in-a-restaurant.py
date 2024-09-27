@@ -2,7 +2,6 @@ class Solution:
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         sol = []
         hm = {}
-
         seen = set()
 
         for order in orders:
