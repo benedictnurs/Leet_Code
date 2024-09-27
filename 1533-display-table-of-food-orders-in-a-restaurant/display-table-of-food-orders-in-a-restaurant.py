@@ -1,29 +1,29 @@
-from collections import defaultdict
-from typing import List
-
 class Solution:
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
-        # Initialize the data structures
-        table_orders = defaultdict(lambda: defaultdict(int))  # table -> {food item -> count}
-        food_items = set()  # To collect all unique food items
+        sol = []
+        hm = {}
+
+        seen = set()
+        seen2 = set()
+
+        for order in orders:
+            seen.add(order[2])
         
-        # Process each order
-        for customer, table, food in orders:
-            table_orders[table][food] += 1  # Count the food ordered at each table
-            food_items.add(food)  # Add the food item to the set of seen items
+        for order in orders:
+            if order[1] not in hm:
+                hm[order[1]] = [order[2]]
+            else:
+                hm[order[1]].append(order[2])
+
+        rows = []
+        row1 = ["Table"] + sorted(seen)
+        rows.append(row1)
+        row2 = dict(sorted(hm.items(), key=lambda item: int(item[0])))
+        for row in row2.items():
+            foodItems = []
+            for item in range(1, len(row1)):
+                foodItems.append(str(row[1].count(row1[item])))
+            tableRow = [row[0]] + foodItems
+            rows.append(tableRow)
         
-        # Sort the food items (for columns)
-        sorted_food_items = sorted(food_items)
-        
-        # Prepare the header row (first row)
-        result = [["Table"] + sorted_food_items]
-        
-        # Sort the tables numerically and construct each table row
-        for table in sorted(table_orders.keys(), key=int):
-            row = [table]  # The first element in the row is the table number
-            for food in sorted_food_items:
-                # Append the count of each food item ordered at this table (default to 0 if not found)
-                row.append(str(table_orders[table][food]))
-            result.append(row)
-        
-        return result
+        return (rows)
