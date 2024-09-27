@@ -9,7 +9,6 @@ class Solution:
                 hm[seenOrder] = i
                 seenOrder += 1
 
-
         for q in queries:
             if q in hm:
                 sol.append(hm[q])
