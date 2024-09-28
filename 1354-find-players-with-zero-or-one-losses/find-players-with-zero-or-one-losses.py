@@ -1,7 +1,6 @@
 class Solution:
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         flattened_list = list(chain(*matches))
-        peeps = set(flattened_list)
         hm = {}
         noloss = []
         oneloss = []
@@ -13,7 +12,7 @@ class Solution:
             else:
                 hm[lose] += 1
 
-        for i in sorted(peeps):
+        for i in sorted(set(flattened_list)):
             if i not in hm:
                 noloss.append(i)
             if i in hm and hm[i] == 1:
