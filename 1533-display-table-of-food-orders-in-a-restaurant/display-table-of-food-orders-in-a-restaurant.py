@@ -4,7 +4,6 @@ class Solution:
         hm = {}
 
         seen = set()
-        seen2 = set()
 
         for order in orders:
             seen.add(order[2])
