@@ -4,7 +4,6 @@ class Solution:
         sol = []
 
         ranked = sorted(set(arr))
-        print(ranked)
 
         for v,i in enumerate(ranked):
             hm[i] = (v+1)
