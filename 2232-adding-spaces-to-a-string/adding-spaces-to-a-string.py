@@ -4,7 +4,7 @@ class Solution:
         l = 0
 
         for r in spaces:
-            sol+=(s[l:r]+" ") 
+            sol += (s[l:r] + " ") 
             l = r
 
         return (sol + s[l:])
