@@ -1,12 +1,16 @@
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
-        if ch not in word:
-            return word
+        sol = ""
+        stack = []
+        end = 0
+        for r in range(len(word)):
+            if word[r] == ch and end == 0:
+                end = r + 1
+
+        for l in range(end):
+            stack.append(word[l])
         
-        idx = 0
-        for i in range(len(word)):
-            if word[i] == ch:
-                idx = i
-                break
-        rev = word[:idx+1][::-1] + word[idx+1:]
-        return(rev)
+        for i in range(len(stack)):
+            sol += stack.pop()
+
+        return (sol + word[end:])
