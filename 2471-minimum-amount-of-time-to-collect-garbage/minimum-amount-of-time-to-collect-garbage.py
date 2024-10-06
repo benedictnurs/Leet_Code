@@ -41,7 +41,6 @@ class Solution:
             index = hm["M"][1]
             time += (sum(trv[:index]) + count)
 
-        print(time)
         return time
 
 
