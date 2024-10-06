@@ -12,6 +12,5 @@ class Solution:
                     sol[index] = False
                     break
                 
-                
         return (sol) 
         
