@@ -11,7 +11,8 @@ class Solution:
             for i in range(len(lst)-1):
                 if (lst[i+1]-lst[i]) != diff:
                     sol[index] = False
-
+                    break
+                
                 
         return (sol) 
         
