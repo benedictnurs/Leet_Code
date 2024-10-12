@@ -1,44 +1,23 @@
-class MinStack(object):
+class MinStack:
 
     def __init__(self):
-        self.stack = []
+        self.stack =[]
+        self.minStack = []
 
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        val = min(val, self.minStack[-1] if self.minStack else val)
+        self.minStack.append(val)
 
-    def push(self, val):
-        """
-        :type val: int
-        :rtype: None
-        """
-        self.stack.insert(0, val)
-        
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
 
-    def pop(self):
-        """
-        :rtype: None
-        """
-        if self.stack:
-            self.stack.pop(0)
+    def top(self) -> int:
+        return self.stack[-1]        
 
-    def top(self):
-        """
-        :rtype: int
-        """
-        if self.stack:
-            return self.stack[0]
-        else:
-            return None
-
-        
-
-    def getMin(self):
-        """
-        :rtype: int
-        """
-        if self.stack:
-            return min(self.stack)
-        else:
-            return None
-        
+    def getMin(self) -> int:
+        return self.minStack[-1]
 
 
 # Your MinStack object will be instantiated and called as such:
