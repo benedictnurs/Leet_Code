@@ -6,12 +6,7 @@ class Solution:
 
         for i in range(1, n+1):
             left += i
-            print(left, right)
             if left == right:
                 return i
             right -= i
-        
-
-
-
         return -1
