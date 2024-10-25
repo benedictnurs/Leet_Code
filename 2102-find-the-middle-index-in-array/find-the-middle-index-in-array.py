@@ -5,9 +5,8 @@ class Solution:
 
         for i in range(len(nums)):
             left += nums[i]
-            print(left, right, i)
             if left == right:
                 return i
             right -= nums[i]
-        
+            
         return -1
