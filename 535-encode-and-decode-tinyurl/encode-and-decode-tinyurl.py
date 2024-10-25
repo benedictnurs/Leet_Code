@@ -7,6 +7,7 @@ class Codec:
         """
         characters = string.ascii_letters + string.digits
         random_string = ''.join(random.choice(characters) for _ in range(5))
+
         while random_string in self.hm:
             random_string = ''.join(random.choice(characters) for _ in range(5))
         self.hm[random_string] = longUrl
