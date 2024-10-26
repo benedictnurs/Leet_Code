@@ -4,11 +4,10 @@ class Solution:
         steps = 0
 
         for i in range(len(plants)):
-            if curr < plants[i]:
+            if plants[i] > curr:
+                steps += i*2
                 curr = capacity
-                steps += 2*i
-            steps += 1
             curr -= plants[i]
+            steps += 1
 
-
-        return (steps)
+        return steps
