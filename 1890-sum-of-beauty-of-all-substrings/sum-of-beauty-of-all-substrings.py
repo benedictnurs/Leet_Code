@@ -10,5 +10,5 @@ class Solution:
                 max_freq = max(freq.values())
                 min_freq = min(freq.values())
                 sol += max_freq - min_freq
-        
+
         return sol
