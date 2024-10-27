@@ -6,7 +6,7 @@ class Solution:
         mapping = (counts.most_common())
         curr = 1
         mapped = 1
-        
+
         for i in mapping:
             if curr >= 9:
                 curr = 1
@@ -14,7 +14,7 @@ class Solution:
             hm[i[0]] = mapped
             curr += 1
 
-        for letter, count in counts.items():
-            sol += (hm[letter]*count)
+        for letter, count in mapping:
+            sol += hm[letter]*count
 
         return sol
