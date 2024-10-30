@@ -7,12 +7,12 @@
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         ans = [0]
-        def recursion(root):
+        def diam(root):
             if root is None:
                 return 0
-            left = recursion(root.left)
-            right = recursion(root.right)
-            ans[0] = max(ans[0], left + right)
-            return max(left, right) + 1
-        recursion(root)
+            left = diam(root.left)
+            right = diam(root.right)
+            ans[0] = max(ans[0], left+right)
+            return max(left,right)+1    
+        diam(root)
         return ans[0]
