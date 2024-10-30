@@ -15,9 +15,8 @@ class Solution:
             
             left = dfs(root.left, val)
             right = dfs(root.right, val)
-
             return left or right
-
+            
         return dfs(root, val)
 
 
