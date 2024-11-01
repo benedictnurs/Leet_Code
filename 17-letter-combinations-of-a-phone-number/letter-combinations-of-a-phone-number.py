@@ -13,12 +13,10 @@ class Solution:
             "9": "wxyz"
         }
     
-        clickec = set()
         lists = [keyboard[i] for i in digits]
         sol = []
 
-        combinations = list(product(*lists))
-        for combo in combinations:
+        for combo in list(product(*lists)):
             sol.append("".join(list(combo))) 
 
         return sol
