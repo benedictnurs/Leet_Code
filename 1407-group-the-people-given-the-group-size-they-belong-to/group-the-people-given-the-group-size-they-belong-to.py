@@ -7,8 +7,7 @@ class Solution:
                 hm[groupSizes[i]] = [i]
             else:
                 hm[groupSizes[i]].append(i)
-        print(hm)
-
+                
         for k,v in hm.items():
             for i in range(0, (len(v)), k):
                 sol.append(v[i:i+k])
