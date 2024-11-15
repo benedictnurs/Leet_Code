@@ -42,11 +42,12 @@ class Solution:
             if pos == 3:
                 pos = 0
             count = 0
-            
+
         values = list(hm.values())
         for i in range(len(values)):
             for j in range(0, len(values[i]), 3):
                 totals = sum(values[i][j:j+3],[])
                 if (len(totals) != len(set(totals))) == True:
                     return False
+                    
         return True
