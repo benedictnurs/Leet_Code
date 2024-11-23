@@ -1,13 +1,10 @@
 class RecentCounter:
-
     def __init__(self):
         self.ping_list = []
 
     def ping(self, t: int) -> int:
-        count = 0
-        ex_range = [t - 3000, t]
         self.ping_list.append(t)
-        while self.ping_list[0] < ex_range[0]:
+        while self.ping_list[0] < t - 3000:
             self.ping_list.pop(0)
         return len(self.ping_list)
 
