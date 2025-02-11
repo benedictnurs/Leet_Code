@@ -3,8 +3,6 @@ class Solution:
         stack = []
         end_idx, end = len(part), list(part)
 
-        
-
         for i in range(len(s)):
             stack.append(s[i])
             while (stack[-end_idx:]) == end:
