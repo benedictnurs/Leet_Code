@@ -1,12 +1,13 @@
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
-        n = len(cost)+1
-        sol = [0] * n
-        print(sol)
-        sol[0] = 0
-        sol[1] = 0
+        n = len(cost)
+        dp = [0 for _ in range(n)]
+        if n == 1 or n == 2:
+            return min(cost)
+        dp[0] = cost[0]
+        dp[1] = cost[1]
 
         for i in range(2, n):
-            sol[i] = (min(sol[i-1]+cost[i-1],sol[i-2]+cost[i-2]))
+            dp[i] = cost[i] + min(dp[i-1], dp[i-2])
         
-        return sol[n-1]
+        return min(dp[-1], dp[-2])
