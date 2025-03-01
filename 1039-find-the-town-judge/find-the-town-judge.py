@@ -10,6 +10,6 @@ class Solution:
 
         for k,v in isTrustedBy.items():
             if trustsSomeone[k] == False and len(v) == n-1:
-                return(k)
+                return k
 
         return -1
