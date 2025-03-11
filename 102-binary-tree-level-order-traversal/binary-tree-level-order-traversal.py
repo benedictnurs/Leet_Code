@@ -27,4 +27,5 @@ class Solution:
                     q.append(node.right)
 
             sol.append(level)
+            
         return sol
