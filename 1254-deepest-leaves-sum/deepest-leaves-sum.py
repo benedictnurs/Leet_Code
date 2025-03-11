@@ -8,10 +8,11 @@ class Solution:
     def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
         if root is None:
             return
-        sol = []
+        sol = 0
         q = deque([root])
 
         while q:
+            sol = 0
             level = []
             level_size = len(q)
             for _ in range(level_size):
@@ -21,9 +22,9 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            sol.append(level)
+            sol += sum(level)
         
-        return sum(sol[-1])
+        return sol
 
 
 
