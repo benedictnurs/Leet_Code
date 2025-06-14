@@ -1,10 +1,16 @@
 class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
-        hm = {}
+        # Greedy problem
+        # Set to inf
+        # Find the minimum
+        # If there is a negative version compare it to 
+        # see if it is the same as the current sol
+        sol = float(inf)
 
         for i in nums:
-            if abs(i) not in hm:
-                hm[abs(i)] = [i]
-            else:
-                hm[abs(i)].append(i)
-        return max(hm[(min(hm))])
+            if abs(sol) > abs(i):
+                sol = i
+            if abs(sol) == abs(i):
+                sol = max(sol, i)
+                
+        return sol
