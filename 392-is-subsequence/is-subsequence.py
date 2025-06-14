@@ -4,9 +4,7 @@ class Solution:
         if s == "":
             return True
         for r in range(len(t)):
-            if s[l] == t[r]:
-                l += 1
-
-                if len(s) == l:
-                    return True
+            if l < len(s):
+                if s[l] == t[r]:
+                    l += 1
         return l == len(s)
