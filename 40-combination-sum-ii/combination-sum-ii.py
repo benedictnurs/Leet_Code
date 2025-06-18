@@ -2,6 +2,7 @@ class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         sol = []
         res = []
+        candidates.sort()
         count = Counter(candidates)
         def backtrack(current):
             if current == target:
