@@ -15,8 +15,6 @@ class Solution:
                 return True
             for child in graph[node]:
                 if child not in seen:
-                    print(child)
-
                     q.append(child)
                     seen.add(child)
 
