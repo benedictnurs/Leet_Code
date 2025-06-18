@@ -1,14 +1,18 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
-        sol, curr = [], []
-        def backtrack():
-            if n == len(curr):
-                sol.append(curr[:])
-            for i in nums:
-                if i not in curr:
-                    curr.append(i)
-                    backtrack()
-                    curr.pop()
-        backtrack()
+        sol = []
+        res = []
+
+        def backtrack(i):
+            if len(res) == len(nums):
+                sol.append(res[:])
+                return
+
+            for i in range(len(nums)):
+                if nums[i] not in res:
+                    res.append(nums[i])
+                    backtrack(i+1)
+                    res.pop()
+
+        backtrack(0)
         return sol
