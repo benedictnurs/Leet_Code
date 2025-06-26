@@ -5,7 +5,6 @@ class Solution:
 
         for number in numbers:
             if number - 1 not in numbers:
-                curr = number
                 count = 1
 
                 while number + 1 in numbers:
