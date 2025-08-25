@@ -2,6 +2,7 @@ class Solution:
     def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
         hm = {}
         sol = []
+        
         for c in range(len(mat)):
             for r in range(len(mat[0])):
                 v = c + r
@@ -9,7 +10,7 @@ class Solution:
                     hm[v] = [mat[c][r]]
                 else:
                     hm[v].append(mat[c][r])
-        
+                
         direct = 1
         for k, v in hm.items():
             if direct == -1:
