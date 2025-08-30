@@ -23,11 +23,11 @@ class Solution:
 
         for square in range(0, 9, 3):
             tracker = []
-            for c in range(9):
+            for r in range(9):
                 seen = []
-                for r in range(square, square + 3):
-                    if board[c][r] != ".":
-                        seen.append(board[c][r])
+                for c in range(square, square + 3):
+                    if board[r][c] != ".":
+                        seen.append(board[r][c])
                 tracker.append(seen)
 
             for item in range(0, 9, 3):
