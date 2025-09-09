@@ -4,8 +4,7 @@ class Solution:
         l = 0
 
         for r in range(1,len(prices)):
-            diff = prices[r] - prices[l]
             if prices[r] < prices[l]:
                 l = r
-            profit = max(diff, profit)
+            profit = max(profit, prices[r] - prices[l])
         return profit
