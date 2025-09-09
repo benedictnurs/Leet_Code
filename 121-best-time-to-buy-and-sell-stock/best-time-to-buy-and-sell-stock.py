@@ -8,5 +8,4 @@ class Solution:
             while prices[r] < prices[l]:
                 l += 1
             profit = max(diff, profit)
-            print(diff)
         return profit
