@@ -10,7 +10,6 @@ class Solution:
             heappush(heap, (-value, key))
         
         while k:
-            print(k)
             k -= 1
             sol.append(heappop(heap)[1])
 
