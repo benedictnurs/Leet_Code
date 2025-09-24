@@ -1,16 +1,25 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        pairs = {"[":"]", "(":")", "{":"}"}
         stack = []
+        if len(s) <= 1:
+            return False
 
         for i in s:
-            if i in pairs:
+            if i in ["(", "{", "["]:
                 stack.append(i)
-            elif i in pairs.values():
+            else:
                 if not stack:
-                    return False 
-                peek = stack.pop()
-                if pairs[peek] != i:
                     return False
-                    
-        return not stack
+                s = stack.pop()
+                if s == "(" and i == ")":
+                    pass
+                elif s == "[" and i == "]":
+                    pass
+                elif s == "{" and i == "}":
+                    pass
+                else:
+                    return False
+        if stack:
+            return False
+
+        return True
