@@ -3,12 +3,14 @@ class Solution:
         sol = 0
         numbers = set(nums)
 
-        for i in numbers:
-            curr = i
-            curr_sol = 0
+        for num in numbers:
+            curr = num
+            count = 0
+            
             if curr - 1 not in numbers:
                 while curr in numbers:
                     curr += 1
-                    curr_sol += 1
-            sol = max(sol, curr_sol)
+                    count += 1
+            sol = max(sol, count)
+
         return sol
