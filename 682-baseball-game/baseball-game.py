@@ -15,5 +15,4 @@ class Solution:
             elif i == "C":
                 sol -= stack[-1]
                 stack.pop()
-            print(stack, sol)
         return sol
