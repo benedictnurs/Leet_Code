@@ -4,7 +4,6 @@ class Solution:
 
         while l < r:
             add = numbers[l] + numbers[r]
-            print(add)
             if add == target:
                 return [l+1, r+1]
             elif add > target:
