@@ -1,17 +1,19 @@
 class Solution:
     def calPoints(self, operations: List[str]) -> int:
-        ans = []
-
+        stack = []
+        sol = 0
         for i in operations:
-            if i.lstrip('-').isdigit():
-                ans.append(int(i))
-            elif i == "C":
-                ans.pop()
-            elif i == "D":
-                doub = ans[-1] * 2
-                ans.append(doub)
+            if i not in ["+","D","C"]:
+                stack.append(int(i))
+                sol += int(i)
             elif i == "+":
-                add = ans[-1] + ans[-2]
-                ans.append(add)
-
-        return sum(ans)
+                sol += stack[-1] + stack[-2]
+                stack.append(stack[-1] + stack[-2])
+            elif i == "D":
+                sol += stack[-1] * 2
+                stack.append(stack[-1] * 2)
+            elif i == "C":
+                sol -= stack[-1]
+                stack.pop()
+            print(stack, sol)
+        return sol
