@@ -5,8 +5,8 @@ class Solution:
 
         for i in range(1, len(intervals)):
             if (sol[-1][1] >= intervals[i][0]):
-                sol[-1][1] = max(sol[-1][1], intervals[i][1])
+                sol[-1][1] = max(intervals[i][1], sol[-1][1])
             else:
                 sol.append(intervals[i])
 
-        return sol
+        return(sol)
