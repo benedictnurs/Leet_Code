@@ -4,9 +4,11 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
 
-        for i in range(len(matrix)):
-            for j in range(i):
-                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for row in range(len(matrix)):
+            for col in range(row):
+                matrix[row][col], matrix[col][row] = matrix[col][row],matrix[row][col]
+        
+        for row in range(len(matrix)):
+            matrix[row] = matrix[row][::-1]
+                
 
-        for i in range(len(matrix)):
-            matrix[i].reverse()
