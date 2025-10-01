@@ -7,10 +7,8 @@ class Solution:
 
         for i in range(1, len(nums)):
             prefix += nums[i]
-            print(prefix, nums[i])
             arr.append(prefix)
-        print(nums)
-        print(arr)
+
         for i in arr:
             if i > 0:
                 sol += 1
