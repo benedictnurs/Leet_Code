@@ -3,7 +3,7 @@ class Solution:
         k = len(s1)
         counts = Counter(s1)
 
-        for i in range(len(s2)):
+        for i in range(len(s2)-k+1):
             window = Counter(s2[i:i+k])
             if (window == counts) == True:
                 return True
