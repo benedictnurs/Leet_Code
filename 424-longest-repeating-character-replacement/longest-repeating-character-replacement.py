@@ -8,7 +8,6 @@ class Solution:
             hm[s[r]] += 1
             maxFreq = max(hm.values())
             currLen = r-l+1
-            print(currLen, maxFreq)
             if currLen - maxFreq > k:
                 hm[s[l]] -= 1
                 l += 1
