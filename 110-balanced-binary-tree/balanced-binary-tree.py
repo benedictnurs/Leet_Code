@@ -12,8 +12,8 @@ class Solution:
                 return 0
             left = dfs(node.left)            
             right = dfs(node.right)
-            diff = abs(left - right)
-            if diff > 1:
+
+            if abs(left - right) > 1:
                 sol[0] = False 
 
             return 1 + max(left,right)
