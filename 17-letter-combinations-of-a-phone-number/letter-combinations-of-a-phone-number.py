@@ -13,11 +13,20 @@ class Solution:
             "9": "wxyz"
         }
     
-        lists = [keyboard[i] for i in digits]
         sol = []
+        res = []
 
-        for combo in list(product(*lists)):
-            sol.append("".join(list(combo))) 
+        def backtrack(index):
+            if index == len(digits):
+                sol.append("".join(res[:]))
+                return
+            letters = keyboard[digits[index]]
+            for i in letters:
+                res.append(i)
+                backtrack(index+1)
+                res.pop()
+            return
+        
+        backtrack(0)
 
-        return sol
-
+        return (sol)
