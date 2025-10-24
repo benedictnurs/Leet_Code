@@ -2,7 +2,6 @@ class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
         for i in s:
-            print(stack)
             if i != "]":
                 stack.append(i)
             if i == "]":
@@ -14,5 +13,4 @@ class Solution:
                 while stack and stack[-1].isdigit():
                     num = stack.pop() + num
                 stack.append(curr * int(num))
-        print(stack)
         return "".join(stack)
