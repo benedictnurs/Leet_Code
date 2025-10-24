@@ -8,10 +8,7 @@ class Solution:
 
             if i in ["+","-","/","*"]:
                 if len(stack) >= 2:
-                    num1, num2 = int(stack[-1]), int(stack[-2])
-                    stack.pop()
-                    stack.pop()
-
+                    num1, num2 = int(stack.pop()), int(stack.pop())
 
                     if i == "+":
                         stack.append(num1 + num2)
