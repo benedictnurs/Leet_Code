@@ -1,21 +1,25 @@
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
-        graph = [[] for _ in range(n)]
-        seen = set()
+        if len(edges) == 0:
+            return True
+        paths = defaultdict(list)
         q = deque([source])
-        count = 0
-
-        for u, v in edges:
-            graph[u].append(v)
-            graph[v].append(u)
-
+        seen = set()
+        for i,j in edges:
+            paths[i].append(j)
+            paths[j].append(i)
+        
         while q:
             node = q.popleft()
-            if node == destination:
-                return True
-            for child in graph[node]:
-                if child not in seen:
-                    q.append(child)
-                    seen.add(child)
+            if node in paths:
+                if node == destination:
+                    return True
+                for child in paths[node]:
+                    if child not in seen:
+                        q.append(child)
+                        seen.add(child)
 
         return False
+        
+
+        
