@@ -6,19 +6,12 @@ class Solution:
 
         def dfs(row, col):
             if row < 0 or row >= n or col < 0 or col >= m or grid[row][col] != 1:
-                return
+                return 0
             grid[row][col] = 0
-            nonlocal curr
-            curr += 1
-            dfs(row+1,col)
-            dfs(row,col+1)
-            dfs(row-1,col)
-            dfs(row,col-1)
+            return 1 + dfs(row+1,col) + dfs(row-1,col) + dfs(row,col+1) + dfs(row,col-1)
         
         for r in range(n):
             for c in range(m):
                 if grid[r][c] == 1:
-                    dfs(r,c)
-                    sol = max(curr, sol)
-                    curr = 0
+                    sol = max(dfs(r,c), sol)
         return sol
