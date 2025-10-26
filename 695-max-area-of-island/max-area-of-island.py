@@ -17,7 +17,6 @@ class Solution:
         
         for r in range(n):
             for c in range(m):
-                print(grid[r][c])
                 if grid[r][c] == 1:
                     dfs(r,c)
                     sol = max(curr, sol)
