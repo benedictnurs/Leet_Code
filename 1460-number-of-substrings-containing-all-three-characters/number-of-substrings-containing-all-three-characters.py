@@ -4,7 +4,6 @@ class Solution:
         n = len(s)
         count = 0
         l = 0
-        print(hm)
 
         for r in range(n):       
             hm[s[r]] += 1
