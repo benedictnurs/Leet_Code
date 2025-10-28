@@ -11,15 +11,14 @@ class Solution:
                 r, c = q.popleft()
                 for dr, dc in directions:
                     nr, nc = r+dr, c+dc
-                    if nr < 0 or nr >= n or nc < 0 or nc >= m or grid[nr][nc] == "0":
-                        continue
-                    else:
+                    if 0 <= nr < n and 0 <= nc < m and grid[nr][nc] == "1":
                         q.append((nr,nc))
                         grid[nr][nc] = "0"
-        
+
         for row in range(n):
             for col in range(m):
                 if grid[row][col] == "1":
                     bfs(row, col)
                     count += 1
+                    
         return count
