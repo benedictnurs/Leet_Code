@@ -9,26 +9,21 @@ class Solution:
         if not root:
             return []
         
-        tree = []
         q = deque([root])
         sol = []
 
         while q:
             level = []
             level_size = len(q)
+            sol.append(q[-1].val)
 
             for _ in range(level_size):
                 node = q.popleft()
-                level.append(node.val)
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            tree.append(level)
-        
-        for i in tree:
-            sol.append(i[-1])
-            
+
         return sol
 
             
