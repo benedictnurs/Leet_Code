@@ -7,12 +7,10 @@ from collections import deque
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        if not root:
+        if root is None:
             return []
-        
-        tree = []
         q = deque([root])
-
+        sol = []
         while q:
             level = []
             for _ in range(len(q)):
@@ -22,7 +20,6 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            tree.append(level)
+            sol.append(level)
 
-        return tree
-            
+        return sol            
