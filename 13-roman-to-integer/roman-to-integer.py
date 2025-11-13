@@ -11,9 +11,8 @@ class Solution:
         }
         count = 0
         for i in range(len(s)-1):
-            print(s[i], s[i+1])
             if hm[s[i]] < hm[s[i+1]]:
                 count -= hm[s[i]]
             else:
                 count += hm[s[i]]
-        return (count +  hm[s[-1]])
+        return count +  hm[s[-1]]
