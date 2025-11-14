@@ -1,19 +1,17 @@
 class Solution:
-    def partitionLabels(self, s: str) -> List[int]:
+    def partitionLabels(self, s: str) -> List[int]: 
         hm = {}
         sol = []
-
-        for i in range(len(s)):
-            hm[s[i]] = i
-        
-        maxs = 0
+        end = 0
         count = 0
+        for n, i in enumerate(s):
+            hm[i] = n
 
-        for i in range(len(s)):
-            maxs = max(maxs, hm[s[i]])
+        for index, letter in enumerate(s):
+            end = max(end, hm[letter])
+            # print(index, letter, end)
             count += 1
-            if i == maxs:
+            if index == end:
                 sol.append(count)
                 count = 0
-                
         return sol
