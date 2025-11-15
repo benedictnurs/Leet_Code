@@ -13,7 +13,7 @@ class Solution:
             else:
                 hm[tuple(key)].append(word)
         
-        return [i for i in hm.values()]
+        return list(hm.values())
 
 
 
