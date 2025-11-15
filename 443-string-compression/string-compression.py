@@ -5,12 +5,13 @@ class Solution:
         n = len(chars)
 
         while read < n:
-            count = 0
             current = chars[read]
-            while read < n and current == chars[read]:
-                count += 1
-                read += 1
+            count = 0
 
+            while read < n and current == chars[read]:
+                read += 1
+                count += 1
+            
             chars[write] = current
             write += 1
 
