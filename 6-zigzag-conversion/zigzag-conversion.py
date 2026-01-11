@@ -15,7 +15,5 @@ class Solution:
                 count_down = True
             if count == 0:
                 count_down = False
-
-             
-        
+         
         return "".join(matrix)
