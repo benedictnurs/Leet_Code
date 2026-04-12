@@ -11,5 +11,4 @@ class Solution:
                 nums[i] + total[i-3],
                 nums[i] + total[i-2]
             ))
-        print(total)
         return max(total)
