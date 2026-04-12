@@ -13,5 +13,5 @@ class Solution:
             prev *= nums[n]
             n-=1
             numbers[n] *= prev
-            # print(prev, numbers[n])
+
         return (numbers)
