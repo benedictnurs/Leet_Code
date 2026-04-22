@@ -9,7 +9,6 @@ class Solution:
                     if q[i] != d[i]:
                         count += 1
                 if count <= 2:
-                    print(count)
                     sol.append(q)
                     break
         return(sol)
