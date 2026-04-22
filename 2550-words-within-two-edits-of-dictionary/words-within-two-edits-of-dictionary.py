@@ -11,4 +11,5 @@ class Solution:
                 if count <= 2:
                     sol.append(q)
                     break
+
         return(sol)
