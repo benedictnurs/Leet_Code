@@ -7,7 +7,7 @@ class Solution:
             q = deque([(row, col)])
             directions = [(0,1),(0,-1),(1,0),(-1,0)]
             start_letter = grid[row][col]
-            print(start_letter)
+
             while q:
                 r, c = q.popleft()
                 visited[r][c] = True
@@ -24,7 +24,6 @@ class Solution:
                             return True
                         seen.add((nr, nc))
                         q.append((nr,nc))
-            return False
 
 
         for row in range(n):
