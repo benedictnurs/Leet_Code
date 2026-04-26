@@ -13,7 +13,7 @@ class Solution:
 
         while q:
             r,c,t = q.popleft()
-            time = max(time, t)
+            time = t
             for dr, dc in directions:
                 nr,nc = dr+r,dc+c
                 if 0 <= nr < n and 0 <= nc < m and grid[nr][nc] == 1:
